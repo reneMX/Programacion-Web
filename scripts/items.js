@@ -1,21 +1,26 @@
 
+var array_lugares_img = []
+
+
+    function agregarAFavorito(){
+        
+        //obtenemos la lista que se creo en el index.html
+        //se obtiene mediante el id: 'lista'
+        var lista = document.getElementById("lista");
+        let item  = docuemnt.createElement("li");
+        generaItem();
+
+        titulo.innerHTML =   `${animal.nombre}`;
+        DOMSettableTokenList.innerHTML = `Nombre: ${lugar.nombre}`;
+    }//fin cuncion agregarAFavorito
 
 
 
 
+    function generaItem(){
 
-
-
-function agregar(){
-    var urlImagen = urlImage.split("\\")[2];
-    var nuevo_favorito = JSON.parse( `{"img":"${nombre_imagen}"} `);
-    lugares.push(nuevo_favorito);
-    agregarLugar(nuevo_favorito);
-}
-
-function leerJson(){
-    $.getJSON("files/animales.json",datos=>{
-        var lugares1 = datos.lugares; 
-        datos.lugares.forEach(lugar=>{i++;agregarLugar(lugar)});
-    }).fail( () => console.log("error"));
-}
+        array_lugares_img[i] = document.createElement("canvas");
+        itemVista = document.createElement("div");
+        itemVista.className = "cajaItem";
+        titulo = document.createElement("h3");
+    }//fin funcion generaItem
